@@ -72,5 +72,9 @@ Quando um relato de paciente é processado pela função identificar_sintoma_e_d
 2. Cálculo de Similaridade por Cosseno: O código compara o relato do paciente com todos os sintomas da base de dados e calcula uma pontuação de semelhança (cosine_similarity).
 3. Filtro de Segurança (Regulador de Score): Se a maior nota de similaridade for menor que 0.25, o sistema considera o relato ambíguo ou inconclusivo e retorna "Sintoma Complexo / Inconclusivo" com a orientação "Encaminhar para Avaliação Médica Detalhada".
 4. Cruzamento de Dados: Se passar no filtro, o código descobre qual é o sintoma mais parecido, faz uma busca no DataFrame de referência (sintomas_doencas) e encontra a respetiva Doenca_Associada.
-   
+
+A figura a seguir apresenta a estrutura principal do algoritmo.
+<img width="590" height="278" alt="Image" src="https://github.com/user-attachments/assets/6e9a9f68-2471-4189-8d34-6f34ba4fdc7c" />
+
+## 📚 Mecanismo de Busca por Similaridade (Modelo de Avaliação)
 <img width="220" height="140" alt="Image" src="https://github.com/user-attachments/assets/0ac0c841-19c0-4413-a489-17b4f19ebc6c" />
