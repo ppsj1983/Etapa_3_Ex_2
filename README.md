@@ -108,11 +108,8 @@ Hierarquia de Gravidade: Se um relato contiver múltiplas palavras-chave, o cód
 ## 📚 Rotulagem Inicial por Palavras-Chave e Radical (Acurácia do Modelo)
 
 O Diagnóstico do Desempenho
-1. Volume de Dados Insuficiente: Tens apenas 9 relatos classificados no total (5 Forte e 4 Fraco).
-   
-3. O problema do Teste (Support = 1): Como a base de testes (test_size=0.2) ficou apenas com 2 relatos (1 Forte e 1 Fraco), qualquer erro destrói as métricas.
-   
-5. Análise das Métricas:
+
+Análise das Métricas:
    
 	• Fraco (F1-Score: 0.67): O modelo acertou o caso "Fraco", obtendo 100% de recall (encontrou o que devia), mas a precisão foi de 50% porque ele provavelmente classificou tudo como "Fraco".
 
