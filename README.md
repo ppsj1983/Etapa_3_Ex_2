@@ -12,6 +12,9 @@
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/paulo-pereira-de-souza-junior-mba-msc-0b497825/">Paulo Pereira de Souza Junior</a>
 
+## 👨‍🎓 Apresentacao: 
+- <a href="https://youtu.be/VY23rVfZaIM">Video Apresentação - YOUTUBE</a>
+
 ## 📚  Objetivo
 
 Nesta etapa trabalharemos com 2 exercicios, o objetivo central destas duas atividades é simular o funcionamento de um sistema inteligente de triagem e apoio ao diagnóstico médico através do processamento de linguagem natural e da estruturação de dados em Python. O processo inicia-se com a análise de relatos textuais de pacientes para a extração automática de sintomas, os quais são mapeados e armazenados num ficheiro tabular de modo a expandir a base de conhecimento do sistema e sugerir diagnósticos preliminares. Em seguida, essa análise evolui para o desenvolvimento de um classificador de texto focado na avaliação da gravidade das expressões extraídas, permitindo categorizar os pacientes entre baixo e alto risco para simular a priorização de atendimentos num cenário real de triagem clínica.
