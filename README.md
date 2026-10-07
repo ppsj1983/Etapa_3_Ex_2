@@ -106,3 +106,18 @@ Hierarquia de Gravidade: Se um relato contiver múltiplas palavras-chave, o cód
 <img width="710" height="359" alt="Image" src="https://github.com/user-attachments/assets/521e0da6-5861-4821-92c4-42bd851d8080" />
 
 ## 📚 Rotulagem Inicial por Palavras-Chave e Radical (Acurácia do Modelo)
+
+O Diagnóstico do Desempenho
+1. Volume de Dados Insuficiente: Tens apenas 9 relatos classificados no total (5 Forte e 4 Fraco).
+   
+3. O problema do Teste (Support = 1): Como a base de testes (test_size=0.2) ficou apenas com 2 relatos (1 Forte e 1 Fraco), qualquer erro destrói as métricas.
+   
+5. Análise das Métricas:
+   
+	• Fraco (F1-Score: 0.67): O modelo acertou o caso "Fraco", obtendo 100% de recall (encontrou o que devia), mas a precisão foi de 50% porque ele provavelmente classificou tudo como "Fraco".
+
+	• Forte (F1-Score: 0.00): O modelo errou o único caso "Forte" do teste, classificando-o incorretamente como "Fraco".
+
+	• Exatidão (Accuracy) de 50%: Significa que, na prática, o modelo acertou metade das previsões (1 de 2 frases).
+
+<img width="431" height="233" alt="Image" src="https://github.com/user-attachments/assets/2a27336b-907d-45b0-86c5-50233d595f19" />
