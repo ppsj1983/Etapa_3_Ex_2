@@ -76,5 +76,20 @@ Quando um relato de paciente é processado pela função identificar_sintoma_e_d
 A figura a seguir apresenta a estrutura principal do algoritmo.
 <img width="590" height="278" alt="Image" src="https://github.com/user-attachments/assets/6e9a9f68-2471-4189-8d34-6f34ba4fdc7c" />
 
-## 📚 Mecanismo de Busca por Similaridade (Modelo de Avaliação)
-<img width="220" height="140" alt="Image" src="https://github.com/user-attachments/assets/0ac0c841-19c0-4413-a489-17b4f19ebc6c" />
+## 📚 Rotulagem Inicial por Palavras-Chave e Radical
+A função analisa o relato de cada paciente utilizando um dicionário de referência (ref_avaliacao):
+• Limpeza e Radical (Stemming básico): O código limpa o texto e verifica se a palavra-chave está presente de forma exata ou se o seu radical (os primeiros 5 caracteres, como complic, sangr) aparece em algum termo do relato.
+• Hierarquia de Gravidade: Se um relato contiver múltiplas palavras-chave, o código prioriza o nível mais crítico encontrado. A ordem de prioridade é: Grave/Forte → Moderado → Leve (ou qualquer outro nível inicial).
+• O resultado gera duas novas colunas em relato_paciente: nivel_sintoma e Palavra_Chave_Referencia. Caso nenhuma palavra seja encontrada, o relato é marcado provisoriamente como "Não Classificado".
+2. Preparação e Filtragem dos Dados de Treino
+• O código isola apenas os relatos que foram classificados com sucesso pelas palavras-chave para servirem como a base de treino do modelo.
+• Filtro de segurança: Ele remove automaticamente do treino as classes (níveis de gravidade) que aparecem menos de duas vezes. Isto garante que o algoritmo tenha dados suficientes para aprender e permite realizar a divisão de validação.
+3. Vetorização Avançada com TF-IDF
+• Utiliza a lista de STOP_WORDS_PT para ignorar palavras que não trazem contexto clínico (como "ao", "da", "numa").
+• Configura o TfidfVectorizer com trigramas (ngram_range=(1, 3)). Isto significa que o modelo vai analisar palavras isoladas, pares e expressões de até três palavras combinadas (ex: "muita dor de", "falta de ar"), tornando a interpretação do contexto do paciente muito mais rica.
+4. Treinamento e Avaliação do Modelo Inteligente
+• Divisão Estratificada: O código divide os dados em treino (80%) e teste (20%) de forma proporcional (stratify=y), garantindo que as classes de risco estejam igualmente distribuídas em ambas as partes.
+• Random Forest: O modelo de florestas aleatórias é configurado com class_weight="balanced", o que corrige automaticamente o desequilíbrio caso existam muito mais relatos de "baixo risco" do que de "alto risco" na base de dados.
+• Relatório de Métricas: Avalia o desempenho imprimindo a precisão e a cobertura (classification_report) com os dados de teste que o modelo nunca viu antes.
+
+<img width="710" height="359" alt="Image" src="https://github.com/user-attachments/assets/521e0da6-5861-4821-92c4-42bd851d8080" />
