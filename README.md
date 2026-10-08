@@ -13,7 +13,7 @@
 - <a href="https://www.linkedin.com/in/paulo-pereira-de-souza-junior-mba-msc-0b497825/">Paulo Pereira de Souza Junior</a>
 
 ## 👨‍🎓 Apresentacao: 
-- <a href="https://youtu.be/VY23rVfZaIM">Video Apresentação - YOUTUBE</a>
+- <a href="https://youtu.be/AEN0-wvo57s">Video Apresentação - YOUTUBE</a>
 
 ## 📚  Objetivo
 
