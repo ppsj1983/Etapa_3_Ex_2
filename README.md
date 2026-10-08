@@ -7,7 +7,7 @@
 <br>
 
 # 🎓 Graduação ON em Inteligência Artificial  
-## 📚 Cap 1 - Desafio Integrador: IA entre Robôs, Sinapses e Medicina
+## 📚  FASE 2: Diagnóstico Automatizado – IA no Estetoscópio Digital
 
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/paulo-pereira-de-souza-junior-mba-msc-0b497825/">Paulo Pereira de Souza Junior</a>
